@@ -16,10 +16,11 @@ api = HfApi(token=os.getenv("HF_TOKEN"))
 # Dataset paths
 DATA_REPO = "Parthipan00410/Bank-Customer-Churn-Data"
 
-Xtrain = pd.read_csv(f"hf://datasets/{DATA_REPO}/Xtrain.csv")
-Xtest = pd.read_csv(f"hf://datasets/{DATA_REPO}/Xtest.csv")
-ytrain = pd.read_csv(f"hf://datasets/{DATA_REPO}/ytrain.csv")
-ytest = pd.read_csv(f"hf://datasets/{DATA_REPO}/ytest.csv")
+Xtrain = pd.read_csv(f"hf://datasets/{DATA_REPO}/X_train.csv")
+Xtest = pd.read_csv(f"hf://datasets/{DATA_REPO}/X_test.csv")
+ytrain = pd.read_csv(f"hf://datasets/{DATA_REPO}/Y_train.csv")
+ytest = pd.read_csv(f"hf://datasets/{DATA_REPO}/Y_test.csv")
+
 
 # Class weight for imbalance
 class_weight = ytrain.value_counts()[0] / ytrain.value_counts()[1]
