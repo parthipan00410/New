@@ -2,6 +2,7 @@ from huggingface_hub.utils import RepositoryNotFoundError
 from huggingface_hub import HfApi
 from sklearn.model_selection import train_test_split
 import pandas as pd
+import os
 api = HfApi(token=os.getenv("HF_TOKEN"))
 # HuggingFace dataset path
 DATASET_PATH = "hf://datasets/Parthipan00410/Bank-Customer-Churn-Data/bank_customer_churn.csv"
