@@ -36,7 +36,7 @@ numeric_features = [
     "IsActiveMember",
     "EstimatedSalary"
 ]
-
+categorical_features = ["Geography"]
 preprocessor = make_column_transformer(
     (StandardScaler(), numeric_features),
     (OneHotEncoder(handle_unknown="ignore"), categorical_features)
