@@ -32,7 +32,7 @@ Y_train.to_csv('Y_train.csv',index=False)
 Y_test.to_csv('Y_test.csv',index=False)
 
 # Upload each file to HuggingFace dataset repo
-files = ["Xtrain.csv", "Xtest.csv", "ytrain.csv", "ytest.csv"]
+files = ["X_train.csv", "X_test.csv", "Y_train.csv", "Y_test.csv"]
 for i in files:
   api.upload_file(
       path_or_fileobj=i,
