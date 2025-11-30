@@ -47,6 +47,8 @@ jobs:
         run: pip install -r new/requirements.txt
         
       - name: Run model training
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: python new/model_building/train.py
 
   deploy-hosting:
