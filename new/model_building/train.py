@@ -58,7 +58,7 @@ param_grid = {
 }
 model=make_pipeline(preprocessor,xgb_model)
 model_gv=GridSearchCV(model,param_grid,cv=5,n_jobs=-1)
-model_gv.fit(X_train,Y_train)
+model_gv.fit(Xtrain,ytrain)
 best_model = model_gv.best_estimator_
 # Predictions
 threshold = 0.45
